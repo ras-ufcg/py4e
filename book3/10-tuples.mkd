@@ -425,17 +425,15 @@ Usando tuplas como chaves em dicionários
 \index{tuple!as key in dictionary}
 \index{hashable}
 
-Como as tuplas são *mutáveis* e as listas não são, se nós
-desejamod criar uma chave *composta* para usar em um dicionário
+Como as tuplas são *mutáveis* e as listas não, se nós
+desejamos criar uma chave *composta* para usar em um dicionário
 devemos usar uma tupla como chave.
 
-Nós encontraríamos uma chave composta se quiséssemos criar um telefone
-diretório que mapeia de pares de nome e sobrenome, para números de telefone.
-Assumindo que definimos as variáveis 'last`,`first` e` number`, poderíamos escrever
+Nós encontraríamos uma chave composta se quiséssemos criar uma lista telefônica que mapeia nome-sobrenome associando a números de telefone. Assumindo que definimos as variáveis `primeiro`, `ultmo` e `numero`, poderíamos escrever
 um dicionário com a declaração de atribuição da seguinte forma:
 
 ~~~~ {.python}
-diretório [último, primeiro] = número
+diretorio[primeiro, ultimo] = número
 ~~~~
 
 A expressão entre colchetes é uma tupla. Poderíamos usar a atribuição de tupla em
@@ -444,14 +442,13 @@ uma repetição `for` para percorrer este dicionário.
 \index{tuple!in brackets}
 
 ~~~~ {.python}
-for último, primeiro in diretório:
-    imprimir (primeiro, último, diretório [último, primeiro])
+for ultimo, primeiro in diretorio:
+    mostrar (primeiro, ultimo, diretório [primeiro, ultimo])
 ~~~~
 
-Este loop percorre as chaves em `directory`, que são
-tuplas. Ele designa os elementos de cada tupla para `last` e
-`primeiro`, depois imprime o nome e o telefone correspondente
-número.
+Este loop percorre as chaves em `directorio`, que são
+tuplas. Ele designa os elementos de cada tupla para `primeiro` e
+`ultimo`, depois mostra em tela o nome e o telefone correspondente ao número.
 
 
 Sequências: strings, listas e tuplas - Oh meu Deus!
@@ -459,14 +456,10 @@ Sequências: strings, listas e tuplas - Oh meu Deus!
 
 \index{sequence}
 
-Concentrei-me em listas de tuplas, mas quase todos os exemplos neste capítulo também 
-funcionam com listas de listas, tuplas de tuplas e tuplas de listas. Para evitar 
-enumerar as combinações possíveis, às vezes é mais fácil falar sobre sequências de 
-sequências.
+Eu me concentrei nas listas de tuplas, mas quase todos os exemplos deste capítulo também trabalham com listas de listas, tuplas de tuplas e tuplas de listas. Para evitar enumerar as combinações possíveis, às vezes é mais fácil falar sobre sequências de sequências.
 
 Em muitos contextos, os diferentes tipos de sequências (strings, listas e tuplas) 
-podem ser usados de forma intercambiável. Então, como e por que você escolhe um 
-sobre os outros?
+podem ser usados de forma permutável. Então, como e por que você escolhe um em relação aos outros?
 
 \index{string}
 \index{list}
@@ -479,24 +472,24 @@ porque os elementos precisam ser caracteres. Eles também são imutáveis. Se vo
 precisar alterar os caracteres em uma string (em vez de criar uma nova string), 
 você deveria usar uma lista de caracteres.
 
-As listas são mais comuns que as tuplas, principalmente porque são mutáveis. Mas há 
+As listas são mais comuns que as tuplas, principalmente porque são mutáveis. Mas existem 
 alguns casos em que você pode preferir tuplas:
 
 1.  Em alguns contextos, como uma instrução de `return`, é sintaticamente mais
 simples criar uma tupla do que uma lista. Em outros contextos, você pode preferir 
 uma lista.
 
-2.  Se você quiser usar uma sequência como uma chave de dicionário, você tem que 
+2.  Caso queira usar uma sequência como uma chave de dicionário, você tem que 
 usar um tipo imutável como uma tupla ou uma string.
 
-3.  Se você estiver passando uma sequência como um argumento para uma função, o uso 
+3.  Mas se estiver passando uma sequência como argumento para uma função, o uso 
 de tuplas reduz o potencial de comportamento inesperado devido ao 
-aliasing(serrilhamento).
+aliasing (serrilhamento).
 
 Como as tuplas são imutáveis, elas não fornecem métodos como `sort` e `reverse`, o 
 que modifica as listas existentes. No entanto, o Python fornece as funções internas 
 `sorted` and `reversed`, que usam qualquer sequência como parâmetro e retornam uma 
-nova seqüência com os mesmos elementos em uma ordem diferente.
+nova sequência com os mesmos elementos em uma ordem diferente.
 
 \index{sorted function}
 \index{function!sorted}

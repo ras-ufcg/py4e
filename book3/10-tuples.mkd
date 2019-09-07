@@ -345,13 +345,13 @@ Múltipla atribuição com dicionários
 Combinando `items`, atribuição de tuplas e `for`, se tem um bom padrão de código para percorrer as chaves e valores de um dicionário em um único loop:
 
 ~~~~ {.python}
-for key, val in list(d.items()):
-    print(val, key)
+for chave, valor in lista(d.items()):
+    print(valor, chave)
 ~~~~
 
-Esse loop tem duas *variáveis de iteração*, isso porque `items` retorna uma lista de tuplas e `key, val` é uma atribuição de tupla que itera sucessivamente em cada um dos pares de valore/chave no dicionário.
+Esse loop tem duas *variáveis de iteração*, isso porque `items` retorna uma lista de tuplas e `chave, valor` é uma atribuição de tupla que itera sucessivamente em cada um dos pares de valor/chave no dicionário.
 
-Para cada iteração através de um loop, tanto a chave quanto o valor são avançados para o próximo par de valores no dicionário(mantendo a ordem hash).
+Para cada iteração através de um loop, tanto a chave quanto o valor são avançados para o próximo par de valores no dicionário (mantendo a ordem hash).
 
 A saída deste loop é:
 
@@ -361,11 +361,11 @@ A saída deste loop é:
 1 b
 ~~~~
 
-Novamente, é na ordem da chave hash(nenhuma ordem particular).
+Novamente, é na ordem da chave hash (nenhuma ordem particular).
 
-Se nós combinarmos essas duas técnicas, nós poderemos imprimir o conteúdo do dicionário ordenado pelo *valor* armazenado em cada par de chave/valor.
+Se nós combinarmos essas duas técnicas, poderemos mostrar o conteúdo do dicionário ordenado pelo *valor* armazenado em cada par de chave/valor.
 
-Para fazer isso, primeiro fazemos uma lista de tuplas onde cada tupla é `(valor, chave)`. O método `items` nos daria uma lista de tuplas `(chave, valor)`, mas desta vez queremos classificar por valor, não por chave. Depois de construir a lista com as tuplas de chave e valor é simples ordenar a lista na ordem inversa e imprimir a nova lista ordenada.
+Para fazer isso, primeiro fazemos uma lista de tuplas onde cada tupla é `(valor, chave)`. O método `items` nos daria uma lista de tuplas `(chave, valor)`, mas desta vez queremos classificar por valor, não por chave. Depois de construir a lista com as tuplas de chave e valor é simples ordenar a lista na ordem inversa e mostrar em tela a nova lista ordenada.
 
 ~~~~ {.python}
 >>> d = {'a':10, 'b':1, 'c':22}
@@ -388,20 +388,20 @@ As palavras mais comuns
 
 \index{Romeu e Julieta}
 
-Voltando ao nosso exemplo de sempre do texto de Romeu e Julieta, Ato 2, Cena 2, podemos aumentar nosso programa para usar essa técnica para imprimir as dez palavras mais comuns no texto da seguinte forma:
+Voltando ao nosso exemplo de sempre do texto de Romeu e Julieta, Ato 2, Cena 2, podemos aumentar nosso programa para usar essa técnica para mostrar em tela as dez palavras mais comuns no texto da seguinte forma:
 
 \VerbatimInput{../code3/count3.py} 
 \begin{trinketfiles}
 ../code3/romeo-full.txt
 \end{trinketfiles}
 
-A primeira parte do programa que lê o arquivo e computa o dicionário que mapeia cada palavra para a contagem no documento não foi alterada. Mas, em vez de simplesmente imprimir `counts` e encerrar o programa, construímos uma lista de tuplas `(val, key)` e depois classificamos a lista na ordem inversa.
+A primeira parte do programa, que lê o arquivo e calcula o dicionário responsável por mapear cada palavra para que a contagem no documento permaneça inalterada. Mas, em vez de simplesmente mostrar `counts` e encerrar o programa, construímos uma lista de tuplas `(valor, chave)` e depois classificamos a lista na ordem inversa.
 
 Como o valor é o primeiro, ele será usado para as comparações. Se houver mais de uma tupla com o mesmo valor, ela olhará para o segundo elemento (a chave), portanto, as tuplas onde o valor é o mesmo serão classificadas pela ordem alfabética da chave.
 
-No final, escrevemos um loop `for` que faz uma iteração de atribuição múltipla e imprime as dez palavras mais comuns, percorrendo uma fatia da lista (`lst [: 10]`).
+No final, escrevemos um loop `for` que faz uma iteração de atribuição múltipla e mostra em tela as dez palavras mais comuns, percorrendo uma fatia da lista (`lst [: 10]`).
 
-Então agora a saída finalmente parece com o que queremos para nossa análise de frequência de palavras.
+Então a saída finalmente parece com o que queremos para nossa análise de frequência de palavras.
 
 ~~~~
 61 u
@@ -416,7 +416,7 @@ Então agora a saída finalmente parece com o que queremos para nossa análise d
 24 thee
 ~~~~
 
-O fato de essa análise e análise de dados complexos poderem ser feitos com um programa Python de 19 linhas e fácil de entender é uma das razões pelas quais o Python é uma boa escolha como uma linguagem para análise de dados.
+O fato dessa complexa análise de dados ser feita com um programa Python de 19 linhas de fácil entendimento é uma das razões pelas quais o Python é uma boa escolha como uma linguagem para explorar informações.
 
 
 Usando tuplas como chaves em dicionários

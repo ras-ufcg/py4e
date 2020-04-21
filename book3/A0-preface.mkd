@@ -44,7 +44,7 @@ Transformações em uma Jornada
 
 A transformação do livro *Python for Everybody* em **Python para Todos**  é o resultado árduo de um projeto do capítulo sobre Robótica e Automação do IEEE-UFCG (RAS IEEE - UFCG), localizado em Campina Grande - Paraíba - Brasil.
 
-Secretário da RAS no ano de 2018 e graduando em Engenharia Elétrica pela UFCG, Arthur Carneiro foi o pioneiro a tornar este sonho realidade. Em seus estudos e pesquisas sobre a área, descobriu que Charles Severance, autor do *Phyton for Everybody*, é um grande encorajador de qualquer estudante, cientista ou profissional que tope o desafio de traduzir sua obra para outro idioma. 
+Secretário da RAS no ano de 2018 e graduando em Engenharia Elétrica pela UFCG, Arthur Carneiro foi o pioneiro a tornar este sonho realidade. Em seus estudos e pesquisas sobre a área, descobriu que Charles Severance, autor do *Python for Everybody*, é um grande encorajador de qualquer estudante, cientista ou profissional que tope o desafio de traduzir sua obra para outro idioma. 
 
 Arthur aceitou a missão e recrutou o seu time. Em agosto de 2018, 7 pessoas foram convocadas para cumprir a nobre tarefa de tornar o trabalho de Severance acessível a milhares de leitores da Língua Portuguesa. Yuri Loia, aluno de mestrado, com conhecimento prévio em Python e fluência em inglês, foi nomeado como gerente do projeto. Sua equipe era composta por 6 graduandos do curso de Engenharia Elétrica: Allyson Hyago, Andhré Carvalho, João Pedro Melquiades, Maysa Freire, Natã Macedo e Vinicius França.
 
